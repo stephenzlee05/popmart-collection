@@ -1,0 +1,264 @@
+{
+  "characters": [
+    { "name": "Labubu" },
+    { "name": "Pucky" },
+    { "name": "Hacipupu" },
+    { "name": "Other" }
+  ],
+  "series": [
+    { "name": "Big Into Energy", "character": "Labubu", "popmartUrl": "https://www.popmart.com/us/pop-now/set/195"},
+    { "name": "Have A Seat", "character": "Labubu", "popmartUrl": "https://www.popmart.com/us/pop-now/set/50" },
+    { "name": "Exciting Macaron", "character": "Labubu" , "popmartUrl": "https://www.popmart.com/us/pop-now/set/40"},
+    { "name": "Beanie Bubble Up", "character": "Pucky", "popmartUrl": "https://www.popmart.com/us/pop-now/set/188" },
+    { "name": "Gummy Bear", "character": "Hacipupu", "popmartUrl": "https://www.popmart.com/us/pop-now/set/279" },
+    { "name": "Other", "character": "Other", "popmartUrl": "http://popmart.com/" }
+  ],
+  "items": [
+    {
+      "name": "Luck",
+      "series": "Big Into Energy",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1745405695191____luck____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-big-into-energy-series-luck-vinyl-plush-pendant"
+    },
+    {
+      "name": "Hope",
+      "series": "Big Into Energy", 
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1745405686256____hope____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-big-into-energy-series-hope-vinyl-plush-pendant"
+    },
+    {
+      "name": "Serenity",
+      "series": "Big Into Energy",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1745405677940____serenity____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-big-into-energy-series-serenity-vinyl-plush-pendant"
+    },
+    {
+      "name": "Loyalty",
+      "series": "Big Into Energy",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1745405671421____loyalty____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-big-into-energy-series-loyalty-vinyl-plush-pendant"
+    },
+    {
+      "name": "Happiness",
+      "series": "Big Into Energy",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1745405664470____happiness____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-big-into-energy-series-happiness-vinyl-plush-pendant"
+    },
+    {
+      "name": "Love",
+      "series": "Big Into Energy",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1745405657247____love____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-big-into-energy-series-love-vinyl-plush-pendant"
+    },
+    {
+      "name": "Id (Secret)",
+      "series": "Big Into Energy",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1745405704500____id-secret____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-big-into-energy-series-id-secret-version-vinyl-plush-pendant"
+    },
+    {
+      "name": "Full Set",
+      "series": "Big Into Energy",
+      "imageUrl": "https://prod-america-res.popmart.com/default/20250418_172540_429482____whole-set_the-monsters-big-into-energy-series-vinyl-plush-pendant-blind-box_plush_details_popmart-us_____1200x1200.jpg",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-big-into-energy-series-vinyl-plush-pendant-sealed-case-6-blind-box"
+    },
+    {
+      "name": "Zizi",
+      "series": "Have A Seat",
+      "imageUrl": "https://prod-global-static.oss-us-east-1.aliyuncs.com/globalAdmin/1720579972892____zizi____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-have-a-seat-zizi-vinyl-plush"
+    },
+    {
+      "name": "Ququ",
+      "series": "Have A Seat",
+      "imageUrl": "https://prod-global-static.oss-us-east-1.aliyuncs.com/globalAdmin/1720579875868____ququ____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-have-a-seat-ququ-vinyl-plush"
+    },
+    {
+      "name": "Dada",
+      "series": "Have A Seat",
+      "imageUrl": "https://prod-global-static.oss-us-east-1.aliyuncs.com/globalAdmin/1720579884288____dada____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-have-a-seat-dada-vinyl-plush"
+    },
+    {
+      "name": "Sisi",
+      "series": "Have A Seat",
+      "imageUrl": "https://prod-global-static.oss-us-east-1.aliyuncs.com/globalAdmin/1720579930683____sisi____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-have-a-seat-sisi-vinyl-plush"
+    },
+    {
+      "name": "Baba",
+      "series": "Have A Seat",
+      "imageUrl": "https://prod-global-static.oss-us-east-1.aliyuncs.com/globalAdmin/1720579938608____baba____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-have-a-seat-baba-vinyl-plush"
+    },
+    {
+      "name": "Hehe",
+      "series": "Have A Seat",
+      "imageUrl": "https://prod-global-static.oss-us-east-1.aliyuncs.com/globalAdmin/1720579945843____hehe____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-have-a-seat-hehe-vinyl-plush"
+    },
+    {
+      "name": "Duodou (Secret)",
+      "series": "Have A Seat",
+      "imageUrl": "https://prod-global-static.oss-us-east-1.aliyuncs.com/globalAdmin/1720579954071____secret____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-have-a-seat-duoduo-vinyl-plush"
+    },
+    {
+      "name": "Full Set",
+      "series": "Have A Seat",
+      "imageUrl": "https://prod-america-res.popmart.com/default/20240710_102700_248352____whole-set_____800x800.png",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-have-a-seat-vinyl-plush-blind-box-set-of-6"
+    },
+    {
+      "name": "Sesame Bean",
+      "series": "Exciting Macaron",
+      "imageUrl": "https://prod-global-static.oss-us-east-1.aliyuncs.com/globalAdmin/1719386489989____sesame-bean____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-tasty-macarons-sesame-bean-vinyl-plush-pendant"
+    },
+    {
+      "name": "Sea Salt Coconut",
+      "series": "Exciting Macaron",
+      "imageUrl": "https://prod-global-static.oss-us-east-1.aliyuncs.com/globalAdmin/1719386519756____sea-salt-coconut____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-tasty-macarons-sea-salt-cocount-vinyl-plush-pendant"
+    },
+    {
+      "name": "Green Grape",
+      "series": "Exciting Macaron",
+      "imageUrl": "https://prod-global-static.oss-us-east-1.aliyuncs.com/globalAdmin/1719386538026____green-grape____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-tasty-macarons-green-grape-vinyl-plush-pendant"
+    },
+    {
+      "name": "Lychee Berry",
+      "series": "Exciting Macaron",
+      "imageUrl": "https://prod-global-static.oss-us-east-1.aliyuncs.com/globalAdmin/1719386563326____lychee-berry____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-tasty-macarons-lychee-berry-vinyl-plush-pendant"
+    },
+    {
+      "name": "Soy Milk",
+      "series": "Exciting Macaron",
+      "imageUrl": "https://prod-global-static.oss-us-east-1.aliyuncs.com/globalAdmin/1719386586865____soymilk____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-tasty-macarons-soymilk-vinyl-plush-pendant"
+    },
+    {
+      "name": "Toffee",
+      "series": "Exciting Macaron",
+      "imageUrl": "https://prod-global-static.oss-us-east-1.aliyuncs.com/globalAdmin/1719386608073____toffee____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-tasty-macarons-toffee-vinyl-plush-pendant"
+    },
+    {
+      "name": "Chestnut Cocoa (Secret)",
+      "series": "Exciting Macaron",
+      "imageUrl": "https://prod-global-static.oss-us-east-1.aliyuncs.com/globalAdmin/1719386635581____secret____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-tasty-macarons-chestnut-cocoa-vinyl-plush-pendant"
+    },
+    {
+      "name": "Full Set",
+      "series": "Exciting Macaron",
+      "imageUrl": "https://prod-america-res.popmart.com/default/20231026_161757_127994__1200x1200.jpg",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-tasty-macarons-vinyl-face-blind-box-whole-set"
+    },
+    {
+      "name": "Sweat Bubble",
+      "series": "Beanie Bubble Up",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1742552657732____sweet-bubble____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-pucky-beanie-bubble-up-series-single-blind-box"
+    },
+    {
+      "name": "Sleepy Bubble",
+      "series": "Beanie Bubble Up",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1742552643340____sleepy-bubble____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-pucky-beanie-bubble-up-series-single-blind-box"
+    },
+    {
+      "name": "Smug Bubble",
+      "series": "Beanie Bubble Up",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1742552632379____smug-bubble____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-pucky-beanie-bubble-up-series-single-blind-box"
+    },
+    {
+      "name": "Crying Bubble",
+      "series": "Beanie Bubble Up",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1742552623711____crying-bubble____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-pucky-beanie-bubble-up-series-single-blind-box"
+    },
+    {
+      "name": "Angry Bubble",
+      "series": "Beanie Bubble Up",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1742552615505____angry-bubble____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-pucky-beanie-bubble-up-series-single-blind-box"
+    },
+    {
+      "name": "Pretty Bubble",
+      "series": "Beanie Bubble Up",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1742552601500____pretty-bubble____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-pucky-beanie-bubble-up-series-single-blind-box"
+    },
+    {
+      "name": "Let's Bubble (Secret)",
+      "series": "Beanie Bubble Up",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1742552670130____secret_let-s-bubble____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-pucky-beanie-bubble-up-series-single-blind-box"
+    },
+    {
+      "name": "Full Set",
+      "series": "Beanie Bubble Up",
+      "imageUrl": "https://prod-america-res.popmart.com/default/20250320_163549_613787____whole-set_pucky-beanie-bubble-up-series-plush-pendant-blind-box_plush_details_popmart-us_____1200x1200.jpg",
+      "stockXUrl": "https://stockx.com/pop-mart-pucky-beanie-bubble-up-series-sealed-case-6-blind-box"
+    },
+    {
+      "name": "Peach Flavor",
+      "series": "Gummy Bear",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1749809715398____peach-flavor____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-hacipupu-gummy-bear-series-vinyl-peach-flavor-plush-pendant"
+    },
+    {
+      "name": "Green Apple Flavor",
+      "series": "Gummy Bear",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1749809707926____green-apple-flavor____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-hacipupu-gummy-bear-series-vinyl-green-apple-flavor-plush-pendant"
+    },
+    {
+      "name": "Pineapple Flavor",
+      "series": "Gummy Bear",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1749809701239____pineapple-flavor____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-hacipupu-gummy-bear-series-vinyl-pineapple-flavor-plush-pendant"
+    },
+    {
+      "name": "Blueberry Flavor",
+      "series": "Gummy Bear",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1749809692801____blueberry-flavor____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-hacipupu-gummy-bear-series-vinyl-blueberry-flavor-plush-pendant"
+    },
+    {
+      "name": "Grape Flavor",
+      "series": "Gummy Bear",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1749809684736____grape-flavor____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-hacipupu-gummy-bear-series-vinyl-grape-flavor-plush-pendant"
+    },
+    {
+      "name": "Cherry Flavor",
+      "series": "Gummy Bear",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1749809675498____cherry-flavor____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-hacipupu-gummy-bear-series-vinyl-cherry-flavor-plush-pendant"
+    },
+    {
+      "name": "Latte Flavor (Secret)",
+      "series": "Gummy Bear",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1749809721227____latte-flavor-secret____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-hacipupu-gummy-bear-series-vinyl-latte-flavor-secret-edition-plush-pendant"
+    },
+    {
+      "name": "Full Set",
+      "series": "Gummy Bear",
+      "imageUrl": "https://prod-america-res.popmart.com/default/20250613_171533_756430____whole-sets_hacipupu-gummy-bear-series-vinyl-plush-pendant-blind-box_plush-toys-_details_popmart-us_____1200x1200.jpg",
+      "stockXUrl": "https://stockx.com/pop-mart-hacipupu-gummy-bear-series-vinyl-plush-pendant-sealed-case-6-blind-box"
+    },
+    {
+      "name": "Custom Item",
+      "series": "Other",
+      "imageUrl": "https://cdn-global-naus.popmart.com/global-web/naus-prod/assets/images/logo.png?x-oss-process=image/format,webp",
+      "stockXUrl": "http://popmart.com/"
+    }
+  ]
+} 
