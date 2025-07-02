@@ -5,8 +5,10 @@ import { CollectionGrid } from "@/components/CollectionGrid";
 import { AddItemForm } from "@/components/AddItemForm";
 import { StatsCard } from "@/components/StatsCard";
 import { FilterBar } from "@/components/FilterBar";
-import { Plus, BarChart3, Grid3X3, AlertCircle, LogOut } from "lucide-react";
+import { ProfileSettings } from "@/components/ProfileSettings";
+import { Plus, BarChart3, Grid3X3, AlertCircle, User, Settings, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useToast } from "@/hooks/use-toast";
 import { PopMartItem } from "@/types/collection";
 import { supabaseApi } from "@/services/supabaseApi";
@@ -19,6 +21,7 @@ const Index = () => {
   const [error, setError] = useState<string | null>(null);
   const [showAddForm, setShowAddForm] = useState(false);
   const [showStats, setShowStats] = useState(false);
+  const [showProfileSettings, setShowProfileSettings] = useState(false);
   const [filter, setFilter] = useState("All");
   const { toast } = useToast();
 
@@ -162,19 +165,32 @@ const Index = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="flex justify-between items-center mb-4">
-            <div></div>
+          <div className="relative flex justify-center items-center mb-4">
             <h1 className="text-4xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
               Pop Mart Collection
             </h1>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
             <Button
               variant="outline"
-              onClick={handleSignOut}
-              className="flex items-center gap-2"
+                  className="flex items-center gap-2 absolute right-0"
             >
-              <LogOut size={16} />
-              Sign Out
+                  <User size={16} />
+                  Profile
             </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-56">
+                <DropdownMenuItem onClick={() => setShowProfileSettings(true)}>
+                  <Settings className="mr-2 h-4 w-4" />
+                  <span>Settings</span>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem onClick={handleSignOut}>
+                  <LogOut className="mr-2 h-4 w-4" />
+                  <span>Sign Out</span>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
           <p className="text-gray-600">Track your adorable collectibles</p>
           {user.email && (
@@ -233,6 +249,11 @@ const Index = () => {
               />
             </div>
           </div>
+        )}
+
+        {/* Profile Settings Modal */}
+        {showProfileSettings && (
+          <ProfileSettings onClose={() => setShowProfileSettings(false)} />
         )}
 
         {/* Empty State */}
