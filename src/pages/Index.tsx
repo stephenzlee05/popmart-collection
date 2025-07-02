@@ -23,6 +23,7 @@ const Index = () => {
   const [showStats, setShowStats] = useState(false);
   const [showProfileSettings, setShowProfileSettings] = useState(false);
   const [filter, setFilter] = useState("All");
+  const [seriesFilter, setSeriesFilter] = useState("All");
   const { toast } = useToast();
 
   // Redirect to auth if not logged in
@@ -124,7 +125,9 @@ const Index = () => {
   };
 
   const filteredItems = items.filter(item => {
-    return filter === "All" || item.status === filter;
+    const statusMatch = filter === "All" || item.status === filter;
+    const seriesMatch = seriesFilter === "All" || item.series === seriesFilter;
+    return statusMatch && seriesMatch;
   });
 
   if (authLoading || loading) {
@@ -229,6 +232,8 @@ const Index = () => {
         <FilterBar 
           filter={filter}
           setFilter={setFilter}
+          seriesFilter={seriesFilter}
+          setSeriesFilter={setSeriesFilter}
           items={items}
         />
 
@@ -262,7 +267,9 @@ const Index = () => {
             <Grid3X3 className="mx-auto mb-4 text-gray-400" size={64} />
             <h3 className="text-xl font-semibold text-gray-600 mb-2">No items found</h3>
             <p className="text-gray-500">
-              {filter === "All" ? "Start building your collection!" : `No items with status "${filter}"`}
+              {filter === "All" && seriesFilter === "All"
+                ? "Start building your collection!"
+                : `No items with${filter !== "All" ? ` status "${filter}"` : ""}${seriesFilter !== "All" ? ` and set "${seriesFilter}"` : ""}`}
             </p>
           </div>
         )}
