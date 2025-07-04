@@ -8,7 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { X } from "lucide-react";
 import { supabaseApi } from "@/services/supabaseApi";
 import { CatalogData } from "@/services/catalogService";
-import { getImageUrl } from "@/utils/linkUtils";
 
 interface AddItemFormProps {
   onSubmit: (item: Omit<PopMartItem, "id" | "userId" | "dateAdded" | "createdAt" | "updatedAt">) => void;
@@ -81,7 +80,7 @@ export const AddItemForm = ({ onSubmit, onCancel }: AddItemFormProps) => {
     if (formData.series && catalogData.itemsBySeries[formData.series]) {
       const found = (catalogData.itemsBySeries[formData.series] as any[]).find(i => i.name === item);
       if (found) {
-        autoImage = found.imageId || "";
+        autoImage = found.image || "";
       }
     }
     
@@ -175,14 +174,14 @@ export const AddItemForm = ({ onSubmit, onCancel }: AddItemFormProps) => {
           </Select>
         </div>
 
-        {/* Show auto-assigned image preview */}
+        {/* Show image preview */}
         {formData.image && (
           <div className="space-y-2">
-            <Label>Auto-assigned Image Preview</Label>
+            <Label>Image Preview</Label>
             <div className="w-20 h-20 rounded-lg overflow-hidden bg-gray-100">
               <img
-                src={getImageUrl(formData.image)}
-                alt="Auto-assigned preview"
+                src={formData.image}
+                alt="Image preview"
                 className="w-full h-full object-cover"
               />
             </div>

@@ -3,7 +3,7 @@ import catalogData from '@/data/catalog-data.json';
 export interface CatalogData {
   characters: string[];
   seriesByCharacter: { [key: string]: string[] };
-  itemsBySeries: { [key: string]: { name: string; imageId: string; stockXUrl?: string }[] };
+  itemsBySeries: { [key: string]: { name: string; image: string; stockXUrl?: string }[] };
   seriesData: { [key: string]: { name: string; character: string; popmartUrl: string } };
 }
 
@@ -41,7 +41,7 @@ export const getCatalog = (): CatalogData => {
     }
     catalog.itemsBySeries[item.series].push({ 
       name: item.name, 
-      imageId: item.imageUrl,
+      image: item.imageUrl,
       stockXUrl: item.stockXUrl
     });
   });

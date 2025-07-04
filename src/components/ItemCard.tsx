@@ -2,7 +2,7 @@ import { PopMartItem } from "@/types/collection";
 import { Edit, Trash2, DollarSign, Package, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { generatePopMartURL, generateStockXURL, getImageUrl } from "@/utils/linkUtils";
+import { generatePopMartURL, generateStockXURL } from "@/utils/linkUtils";
 
 interface ItemCardProps {
   item: PopMartItem;
@@ -29,8 +29,8 @@ export const ItemCard = ({ item, onEdit, onDelete }: ItemCardProps) => {
   const popMartURL = generatePopMartURL(item.character, item.series);
   const stockXURL = generateStockXURL(item.character, item.series, item.item);
   
-  // Get image URL - prioritize imageId over image field
-  const imageUrl = item.imageId ? getImageUrl(item.imageId) : (item.image ? getImageUrl(item.image) : null);
+  // Get image URL - use only image field
+  const imageUrl = item.image
 
   return (
     <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden group">

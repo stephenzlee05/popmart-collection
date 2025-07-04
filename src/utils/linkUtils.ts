@@ -24,13 +24,3 @@ export const generateStockXURL = (character: string, series: string, item: strin
   // Default StockX URL if not found
   return 'https://stockx.com/';
 };
-
-export const getImageUrl = (imageId: string): string => {
-  // Check if it's already a full URL
-  if (imageId.startsWith('http')) {
-    return imageId;
-  }
-  
-  // Default placeholder image
-  return '/LABUBU_240x240.avif';
-};

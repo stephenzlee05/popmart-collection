@@ -8,7 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { X } from "lucide-react";
 import { supabaseApi } from "@/services/supabaseApi";
 import { CatalogData } from "@/services/catalogService";
-import { getImageUrl } from "@/utils/linkUtils";
 
 interface EditItemFormProps {
   item: PopMartItem;
@@ -82,7 +81,7 @@ export const EditItemForm = ({ item, onSubmit, onCancel }: EditItemFormProps) =>
     if (formData.series && catalogData.itemsBySeries[formData.series]) {
       const found = (catalogData.itemsBySeries[formData.series] as any[]).find(i => i.name === item);
       if (found) {
-        autoImage = found.imageId || "";
+        autoImage = found.image || "";
       }
     }
     
@@ -167,14 +166,14 @@ export const EditItemForm = ({ item, onSubmit, onCancel }: EditItemFormProps) =>
           </Select>
         </div>
 
-        {/* Show auto-assigned image preview */}
+        {/* Show image preview */}
         {formData.image && (
           <div className="space-y-2">
-            <Label>Auto-assigned Image Preview</Label>
+            <Label>Image Preview</Label>
             <div className="w-20 h-20 rounded-lg overflow-hidden bg-gray-100">
               <img
-                src={getImageUrl(formData.image)}
-                alt="Auto-assigned preview"
+                src={formData.image}
+                alt="Image preview"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -191,6 +190,7 @@ export const EditItemForm = ({ item, onSubmit, onCancel }: EditItemFormProps) =>
               required
               value={formData.purchasePrice}
               onChange={(e) => setFormData({...formData, purchasePrice: e.target.value})}
+              placeholder="0.00"
               className="rounded-xl"
             />
           </div>
@@ -203,6 +203,7 @@ export const EditItemForm = ({ item, onSubmit, onCancel }: EditItemFormProps) =>
               step="0.01"
               value={formData.sellPrice}
               onChange={(e) => setFormData({...formData, sellPrice: e.target.value})}
+              placeholder="0.00"
               className="rounded-xl"
             />
           </div>
@@ -229,6 +230,7 @@ export const EditItemForm = ({ item, onSubmit, onCancel }: EditItemFormProps) =>
             id="notes"
             value={formData.notes}
             onChange={(e) => setFormData({...formData, notes: e.target.value})}
+            placeholder="Add any notes about this item..."
             className="rounded-xl"
             rows={3}
           />
