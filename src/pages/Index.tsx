@@ -24,6 +24,7 @@ const Index = () => {
   const [showProfileSettings, setShowProfileSettings] = useState(false);
   const [filter, setFilter] = useState("All");
   const [seriesFilter, setSeriesFilter] = useState("All");
+  const [sort, setSort] = useState("set");
   const { toast } = useToast();
 
   // Redirect to auth if not logged in
@@ -128,6 +129,19 @@ const Index = () => {
     const statusMatch = filter === "All" || item.status === filter;
     const seriesMatch = seriesFilter === "All" || item.series === seriesFilter;
     return statusMatch && seriesMatch;
+  });
+
+  const sortedItems = [...filteredItems].sort((a, b) => {
+    if (sort === "set") {
+      return a.series.localeCompare(b.series);
+    } else if (sort === "price") {
+      return b.purchasePrice - a.purchasePrice;
+    } else if (sort === "profit") {
+      const profitA = a.sellPrice && a.status === "Sold" ? a.sellPrice - a.purchasePrice : -Infinity;
+      const profitB = b.sellPrice && b.status === "Sold" ? b.sellPrice - b.purchasePrice : -Infinity;
+      return profitB - profitA;
+    }
+    return 0;
   });
 
   if (authLoading || loading) {
@@ -235,11 +249,13 @@ const Index = () => {
           seriesFilter={seriesFilter}
           setSeriesFilter={setSeriesFilter}
           items={items}
+          sort={sort}
+          setSort={setSort}
         />
 
         {/* Collection Grid */}
         <CollectionGrid 
-          items={filteredItems} 
+          items={sortedItems} 
           onUpdateItem={updateItem}
           onDeleteItem={deleteItem}
         />

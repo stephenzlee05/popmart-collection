@@ -97,7 +97,6 @@ export const AddItemForm = ({ onSubmit, onCancel }: AddItemFormProps) => {
     if (!formData.character || !formData.series || !formData.item) {
       return;
     }
-    
     onSubmit({
       character: formData.character,
       series: formData.series,
@@ -195,6 +194,7 @@ export const AddItemForm = ({ onSubmit, onCancel }: AddItemFormProps) => {
               id="purchasePrice"
               type="number"
               step="0.01"
+              min={0}
               required
               value={formData.purchasePrice}
               onChange={(e) => setFormData({...formData, purchasePrice: e.target.value})}
@@ -209,6 +209,7 @@ export const AddItemForm = ({ onSubmit, onCancel }: AddItemFormProps) => {
               id="sellPrice"
               type="number"
               step="0.01"
+              min={0}
               value={formData.sellPrice}
               onChange={(e) => setFormData({...formData, sellPrice: e.target.value})}
               placeholder="0.00"

@@ -9,6 +9,7 @@
     { "name": "Big Into Energy", "character": "Labubu", "popmartUrl": "https://www.popmart.com/us/pop-now/set/195"},
     { "name": "Have A Seat", "character": "Labubu", "popmartUrl": "https://www.popmart.com/us/pop-now/set/50" },
     { "name": "Exciting Macaron", "character": "Labubu" , "popmartUrl": "https://www.popmart.com/us/pop-now/set/40"},
+    { "name": "COCA-COLA", "character": "Labubu" , "popmartUrl": "https://www.popmart.com/us/pop-now/set/171"},
     { "name": "Beanie Bubble Up", "character": "Pucky", "popmartUrl": "https://www.popmart.com/us/pop-now/set/188" },
     { "name": "Gummy Bear", "character": "Hacipupu", "popmartUrl": "https://www.popmart.com/us/pop-now/set/279" },
     { "name": "Other", "character": "Other", "popmartUrl": "http://popmart.com/" }
@@ -159,6 +160,24 @@
       "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-tasty-macarons-vinyl-face-blind-box-whole-set"
     },
     {
+      "name": "Happy Factor",
+      "series": "COCA-COLA",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1736420082820____happy-factor____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-coca-cola-series-happy-factor-vinyl-face-blind-box"
+    },
+    {
+      "name": "Surprise Shake",
+      "series": "COCA-COLA",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1736420088211____surprise-shake____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-coca-cola-series-surprise-shake-vinyl-face-blind-box"
+    },
+    {
+      "name": "Mysterious Guest (Secret)",
+      "series": "COCA-COLA",
+      "imageUrl": "https://global-static.popmart.com/globalAdmin/1736420092794____secret_mysterious-guest____.png?x-oss-process=image/format,webp",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-coca-cola-series-mysterious-guest-vinyl-face-blind-box"
+    },
+    {
       "name": "Sweet Bubble",
       "series": "Beanie Bubble Up",
       "imageUrl": "https://global-static.popmart.com/globalAdmin/1742552657732____sweet-bubble____.png?x-oss-process=image/format,webp",
@@ -255,10 +274,10 @@
       "stockXUrl": "https://stockx.com/pop-mart-hacipupu-gummy-bear-series-vinyl-plush-pendant-sealed-case-6-blind-box"
     },
     {
-      "name": "Custom Item",
-      "series": "Other",
-      "imageUrl": "https://cdn-global-naus.popmart.com/global-web/naus-prod/assets/images/logo.png?x-oss-process=image/format,webp",
-      "stockXUrl": "http://popmart.com/"
+        "name": "Custom Item",
+        "series": "Other",
+        "imageUrl": "https://cdn-global-naus.popmart.com/global-web/naus-prod/assets/images/logo.png?x-oss-process=image/format,webp",
+        "stockXUrl": "http://popmart.com/"
     }
   ]
 } 

@@ -187,6 +187,7 @@ export const EditItemForm = ({ item, onSubmit, onCancel }: EditItemFormProps) =>
               id="purchasePrice"
               type="number"
               step="0.01"
+              min={0}
               required
               value={formData.purchasePrice}
               onChange={(e) => setFormData({...formData, purchasePrice: e.target.value})}
@@ -201,6 +202,7 @@ export const EditItemForm = ({ item, onSubmit, onCancel }: EditItemFormProps) =>
               id="sellPrice"
               type="number"
               step="0.01"
+              min={0}
               value={formData.sellPrice}
               onChange={(e) => setFormData({...formData, sellPrice: e.target.value})}
               placeholder="0.00"
