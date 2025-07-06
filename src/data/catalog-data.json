@@ -10,6 +10,7 @@
     { "name": "Have A Seat", "character": "Labubu", "popmartUrl": "https://www.popmart.com/us/pop-now/set/50" },
     { "name": "Exciting Macaron", "character": "Labubu" , "popmartUrl": "https://www.popmart.com/us/pop-now/set/40"},
     { "name": "COCA-COLA", "character": "Labubu" , "popmartUrl": "https://www.popmart.com/us/pop-now/set/171"},
+    { "name": "Let's Checkmate", "character": "Labubu" , "popmartUrl": "https://www.popmart.com/us/products/1897/the-monsters-let-s-checkmate-series-vinyl-plush-hanging-card"},
     { "name": "Beanie Bubble Up", "character": "Pucky", "popmartUrl": "https://www.popmart.com/us/pop-now/set/188" },
     { "name": "Gummy Bear", "character": "Hacipupu", "popmartUrl": "https://www.popmart.com/us/pop-now/set/279" },
     { "name": "Other", "character": "Other", "popmartUrl": "http://popmart.com/" }
@@ -176,6 +177,18 @@
       "series": "COCA-COLA",
       "imageUrl": "https://global-static.popmart.com/globalAdmin/1736420092794____secret_mysterious-guest____.png?x-oss-process=image/format,webp",
       "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-coca-cola-series-mysterious-guest-vinyl-face-blind-box"
+    },
+    {
+      "name": "Queen",
+      "series": "Let's Checkmate",
+      "imageUrl": "https://prod-america-res.popmart.com/default/20250123_121659_398103____1_the-monsters-let-s-checkmate-series-vinyl-plush-hanging-card_plush_details_popmart-us_____1200x1200.jpg",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-lets-checkmate-series-vinyl-plush-hanging-card"
+    },
+    {
+      "name": "King",
+      "series": "Let's Checkmate",
+      "imageUrl": "https://prod-america-res.popmart.com/default/20250123_123839_285879____1_the-monsters-let-s-checkmate-series-vinyl-plush-doll_plush_details_popmart-us_____1200x1200.jpg",
+      "stockXUrl": "https://stockx.com/pop-mart-labubu-the-monsters-lets-checkmate-series-vinyl-plush-doll"
     },
     {
       "name": "Sweet Bubble",
