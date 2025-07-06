@@ -20,7 +20,8 @@ export const ItemCard = ({ item, onEdit, onDelete }: ItemCardProps) => {
 
   const calculateProfit = () => {
     if (item.sellPrice && item.status === "Sold") {
-      return item.sellPrice - item.purchasePrice;
+      // Round to two decimal places
+      return Math.round((item.sellPrice - item.purchasePrice) * 100) / 100;
     }
     return null;
   };
@@ -123,7 +124,7 @@ export const ItemCard = ({ item, onEdit, onDelete }: ItemCardProps) => {
                 profit >= 0 ? "text-green-600" : "text-red-600"
               }`}>
                 <DollarSign size={12} className="mr-1" />
-                {profit >= 0 ? "+" : ""}${profit}
+                {profit >= 0 ? "+" : ""}${profit?.toFixed(2)}
               </span>
             </div>
           )}
