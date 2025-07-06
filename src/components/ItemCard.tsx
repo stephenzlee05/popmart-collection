@@ -107,13 +107,17 @@ export const ItemCard = ({ item, onEdit, onDelete }: ItemCardProps) => {
         <div className="space-y-2">
           <div className="flex items-center justify-between text-sm">
             <span className="text-gray-600">Paid:</span>
-            <span className="font-medium text-gray-900">${item.purchasePrice}</span>
+            <span className="font-medium text-gray-900">
+              {Number.isInteger(item.purchasePrice) ? `$${item.purchasePrice}` : `$${item.purchasePrice.toFixed(2)}`}
+            </span>
           </div>
           
           {item.sellPrice && (
             <div className="flex items-center justify-between text-sm">
               <span className="text-gray-600">Sold:</span>
-              <span className="font-medium text-gray-900">${item.sellPrice}</span>
+              <span className="font-medium text-gray-900">
+                {Number.isInteger(item.sellPrice) ? `$${item.sellPrice}` : `$${item.sellPrice.toFixed(2)}`}
+              </span>
             </div>
           )}
           
@@ -123,8 +127,9 @@ export const ItemCard = ({ item, onEdit, onDelete }: ItemCardProps) => {
               <span className={`font-medium flex items-center ${
                 profit >= 0 ? "text-green-600" : "text-red-600"
               }`}>
-                <DollarSign size={12} className="mr-1" />
-                {profit >= 0 ? "+" : ""}${profit?.toFixed(2)}
+                {profit > 0 && "+"}
+                {profit < 0 && "-"}
+                ${Number.isInteger(Math.abs(profit)) ? Math.abs(profit) : Math.abs(profit).toFixed(2)}
               </span>
             </div>
           )}
