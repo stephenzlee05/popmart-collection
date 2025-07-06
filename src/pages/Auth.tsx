@@ -14,9 +14,12 @@ const Auth = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [signInForm, setSignInForm] = useState({ email: '', password: '' });
   const [signUpForm, setSignUpForm] = useState({ email: '', password: '', username: '' });
-  const { signIn, signUp } = useAuth();
+  const { signIn, signUp, resetPassword } = useAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
+  const [showReset, setShowReset] = useState(false);
+  const [resetEmail, setResetEmail] = useState('');
+  const [resetLoading, setResetLoading] = useState(false);
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -77,6 +80,36 @@ const Auth = () => {
     }
   };
 
+  const handleResetPassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setResetLoading(true);
+    try {
+      const { error } = await resetPassword(resetEmail);
+      if (error) {
+        toast({
+          title: 'Reset failed',
+          description: error.message,
+          variant: 'destructive',
+        });
+      } else {
+        toast({
+          title: 'Reset email sent',
+          description: 'Check your email for a password reset link.',
+        });
+        setShowReset(false);
+        setResetEmail('');
+      }
+    } catch (err) {
+      toast({
+        title: 'Error',
+        description: 'An unexpected error occurred.',
+        variant: 'destructive',
+      });
+    } finally {
+      setResetLoading(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
@@ -119,6 +152,15 @@ const Auth = () => {
                     className="rounded-xl"
                   />
                 </div>
+                <div className="flex justify-end">
+                  <button
+                    type="button"
+                    className="text-xs text-purple-600 hover:underline bg-transparent border-0 p-0"
+                    onClick={() => setShowReset(true)}
+                  >
+                    Forgot password?
+                  </button>
+                </div>
                 <Button 
                   type="submit" 
                   className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white rounded-xl"
@@ -128,6 +170,27 @@ const Auth = () => {
                   Sign In
                 </Button>
               </form>
+              {showReset && (
+                <form onSubmit={handleResetPassword} className="mt-4 space-y-2 bg-purple-50 p-4 rounded-xl">
+                  <Label htmlFor="reset-email">Enter your email to reset password</Label>
+                  <Input
+                    id="reset-email"
+                    type="email"
+                    required
+                    value={resetEmail}
+                    onChange={(e) => setResetEmail(e.target.value)}
+                    className="rounded-xl"
+                  />
+                  <div className="flex gap-2 mt-2">
+                    <Button type="submit" className="bg-purple-600 text-white rounded-xl" disabled={resetLoading}>
+                      {resetLoading ? 'Sending...' : 'Send reset link'}
+                    </Button>
+                    <Button type="button" variant="outline" onClick={() => setShowReset(false)} disabled={resetLoading}>
+                      Cancel
+                    </Button>
+                  </div>
+                </form>
+              )}
             </TabsContent>
             
             <TabsContent value="signup">
