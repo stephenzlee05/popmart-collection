@@ -310,6 +310,10 @@ const Index = () => {
           </div>
         )}
       </div>
+      {/* Feedback Message */}
+      <div className="text-center text-xs text-gray-400 mt-8 mb-4">
+        Have feedback? Please dm me on discord <span className="font-semibold text-purple-500">@stevveee!</span>
+      </div>
     </div>
   );
 };
