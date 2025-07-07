@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -28,6 +28,48 @@ export const ProfileSettings = ({ onClose }: ProfileSettingsProps) => {
   const [currentPasswordForPassword, setCurrentPasswordForPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  // Username state
+  const [username, setUsername] = useState<string>("");
+  const [usernameLoading, setUsernameLoading] = useState(false);
+
+  // Fetch current username on mount
+  useEffect(() => {
+    const fetchProfile = async () => {
+      if (!user?.id) return;
+      const { data, error } = await supabase
+        .from('profiles')
+        .select('username')
+        .eq('id', user.id)
+        .single();
+      if (!error && data) {
+        setUsername(data.username || "");
+      }
+    };
+    fetchProfile();
+  }, [user]);
+
+  const updateUsername = async () => {
+    if (!user?.id) return;
+    setUsernameLoading(true);
+    const { error } = await supabase
+      .from('profiles')
+      .update({ username })
+      .eq('id', user.id);
+    setUsernameLoading(false);
+    if (error) {
+      toast({
+        title: "Error",
+        description: error.message,
+        variant: "destructive",
+      });
+    } else {
+      toast({
+        title: "Username Updated",
+        description: "Your username has been updated.",
+      });
+    }
+  };
 
   const updateEmail = async () => {
     if (!newEmail || !currentPasswordForEmail) {
@@ -213,6 +255,36 @@ export const ProfileSettings = ({ onClose }: ProfileSettingsProps) => {
             </TabsList>
 
             <TabsContent value="account" className="mt-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <User size={20} />
+                    Update Username
+                  </CardTitle>
+                  <CardDescription>
+                    Set or change your display username. This is optional and can be changed anytime.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="username">Username</Label>
+                    <Input
+                      id="username"
+                      type="text"
+                      placeholder="Enter username"
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
+                    />
+                  </div>
+                  <Button
+                    onClick={updateUsername}
+                    disabled={usernameLoading}
+                    className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white"
+                  >
+                    {usernameLoading ? "Updating..." : "Update Username"}
+                  </Button>
+                </CardContent>
+              </Card>
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">

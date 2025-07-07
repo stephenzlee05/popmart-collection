@@ -67,6 +67,16 @@ export class SupabaseCollectionAPI {
     };
   }
 
+  // Fetch user profile by id
+  async getProfile(userId: string) {
+    const { data, error } = await supabase
+      .from('profiles')
+      .select('id, username, avatar_url, created_at, updated_at')
+      .eq('id', userId)
+      .single();
+    return { data, error };
+  }
+
   async updateItem(id: string, updates: Partial<PopMartItem>): Promise<void> {
     const updateData: any = {};
     

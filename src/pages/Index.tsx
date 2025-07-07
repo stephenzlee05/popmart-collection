@@ -26,6 +26,7 @@ const Index = () => {
   const [seriesFilter, setSeriesFilter] = useState("All");
   const [sort, setSort] = useState("set");
   const { toast } = useToast();
+  const [username, setUsername] = useState<string | null>(null);
 
   // Redirect to auth if not logged in
   useEffect(() => {
@@ -39,6 +40,23 @@ const Index = () => {
     if (user) {
       loadCollection();
     }
+  }, [user]);
+
+  // Fetch username from profile
+  useEffect(() => {
+    const fetchUsername = async () => {
+      if (!user?.id) {
+        setUsername(null);
+        return;
+      }
+      const { data, error } = await supabaseApi.getProfile(user.id);
+      if (!error && data) {
+        setUsername(data.username || null);
+      } else {
+        setUsername(null);
+      }
+    };
+    fetchUsername();
   }, [user]);
 
   const loadCollection = async () => {
@@ -211,7 +229,9 @@ const Index = () => {
           </div>
           <p className="text-gray-600">Track your adorable collectibles</p>
           {user.email && (
-            <p className="text-sm text-gray-500 mt-1">Welcome back, {user.email}!</p>
+            <p className="text-sm text-gray-500 mt-1">
+              {username ? `Welcome back, ${username}!` : `Welcome back, ${user.email}!`}
+            </p>
           )}
         </div>
 
